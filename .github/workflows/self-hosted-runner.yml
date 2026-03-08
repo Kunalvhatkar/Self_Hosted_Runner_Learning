@@ -1,0 +1,16 @@
+name: self-hosted-runner
+
+on: 
+   workflow_dispatch:
+
+jobs:
+  self-hosted:
+      runs-on: self-hosted
+      steps: 
+        - name: checkout
+          uses: actions/checkout@v4
+        - name: self-hosted-runner-hostname
+          run: echo "$HOSTNAME"
+        - name: print working directory
+          run: echo "Present Working Directory:" pwd
+        

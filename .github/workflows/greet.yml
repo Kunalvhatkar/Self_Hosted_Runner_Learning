@@ -6,7 +6,7 @@ on:
   
 jobs:
   greet:
-    runs-on: self-hosted
+    runs-on: my-linux-runner
     steps:
       - name: say hello
         run: echo "hello This is my first self hosted runner"

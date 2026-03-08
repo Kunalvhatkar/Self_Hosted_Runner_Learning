@@ -9,10 +9,16 @@ jobs:
       steps: 
         - name: checkout
           uses: actions/checkout@v4
-        - name: self-hosted-runner-hostname
-          run: echo "$HOSTNAME"
-          shell: bash
-        - name: print working directory
-          run: echo "Present Working Directory:" pwd
-          shell: bash
         
+        - name: self-hosted-runner-hostname
+          run: hostname
+          
+        - name: print working directory
+          run: pwd
+          
+        - name: Create Test File
+          run: | 
+           echo "Hello from self-hosted runner" > test-file.txt
+
+        - name: list files
+          run: ls -la 
